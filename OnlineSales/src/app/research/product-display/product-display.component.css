@@ -1,0 +1,26 @@
+* {
+  font-size: 18pt;
+}
+
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: 50%;
+  padding: 10px;
+}
+
+label.available {
+  font-weight: bold;
+  color: red;
+}

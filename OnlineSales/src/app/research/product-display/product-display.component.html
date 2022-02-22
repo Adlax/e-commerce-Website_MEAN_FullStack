@@ -1,0 +1,33 @@
+<p>products on sale :</p>
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li *ngFor="let product of (products | evenOdd: 'even')">
+          <label *ngIf="product.stock>0" class="available">
+            <a [routerLink]="['/cart',{outlets:{'cartManagement':['management','add',product._id,0]}}]">
+              {{product.name}},
+            </a>
+          </label>
+          <label *ngIf="product.stock===0">{{product.name}} (not available),</label>
+          Brand : {{product.brand}},
+          Price : {{product.price}}&euro;
+        </li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li *ngFor="let product of (products | evenOdd: 'odd')">
+          <label *ngIf="product.stock>0" class="available">
+            <a [routerLink]="['/cart',{outlets:{'cartManagement':['management','add',product._id,0]}}]">
+              {{product.name}},
+            </a>
+          </label>
+          <label *ngIf="product.stock===0">{{product.name}} (not available),</label>
+          Brand : {{product.brand}},
+          Price : {{product.price}}&euro;
+        </li>
+      </ul>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,23 @@
+<div id="cart" *ngIf="authService.isLoggedIn">
+  <p>
+    <button class="btn btn-primary" (click)="cartDisplay()">Panier de {{authService.firstname}} {{authService.lastname}} / Cart of {{authService.firstname}} {{authService.lastname}}</button>
+  </p>
+  <router-outlet name="cartDisplay"></router-outlet>
+  <router-outlet name="cartManagement"></router-outlet>
+  <router-outlet name="cartValidation"></router-outlet>
+</div>
+
+<!-- <div id="cart" *ngIf="authService.isLoggedIn"> -->
+<!-- <table style="width: 100%" class="table">
+  <tr>
+    <td >
+      <router-outlet name="cartDisplay"></router-outlet>
+    </td>
+    <td>
+      <router-outlet name="cartManagement"></router-outlet>
+    </td>
+  </tr>
+</table>
+<div>
+  <router-outlet name="cartValidation"></router-outlet>
+</div> -->

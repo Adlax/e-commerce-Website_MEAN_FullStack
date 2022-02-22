@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Quantity</th>
+      <th>Add/Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td>{{product.brand}}</td>
+      <td>{{product.nb}}</td>
+      <td>
+        <button (click)="addCartProduct(product._id)">+</button>
+        <button (click)="removeCartProduct(product._id)">-</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<span id="total">Total : {{total}} euros</span>
+<br/><br/>
+<button (click)="cartValidation()">Validation</button>
+<button (click)="cartReset()">Reinitialisation</button>

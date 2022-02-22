@@ -1,0 +1,8 @@
+[
+  { "email" : "delune@lirmm.fr", "password" : "sideree",
+     "firstname" : "Claire", "lastname" : "DELUNE"
+  },
+  { "email" : "pompidor@lirmm.fr", "password" : "2fast4U",
+     "firstname" : "Pierre", "lastname" : "POMPIDOR"
+  }
+]
